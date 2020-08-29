@@ -1,0 +1,11 @@
+name: RNB
+version: ${project.version}
+main: rnb.Rb
+api-version: 1.13
+prefix: RCM
+authors: [RedstoneBread]
+description: RCPIO-STUDIO-MAKE
+website: https://www.rcpio.cn/
+commands:
+  rnb:
+    description: HELP
