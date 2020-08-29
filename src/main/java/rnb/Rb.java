@@ -137,7 +137,7 @@ public final class Rb extends JavaPlugin implements Listener  {
                     sender.sendMessage("--RNB AUTO--");
                     sender.sendMessage("自动开始转换当前坐标");
                     sender.sendMessage("目前不可用");
-                    // 还没做呢 U•ェ•*U
+                    // 还没做呢 U•ェ•U
                     return true;
                 }
                 if (args[0].toLowerCase().equals("math")) {
