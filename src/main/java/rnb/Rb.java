@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 public final class Rb extends JavaPlugin implements Listener  {
     private JavaPlugin plugin = null;
     private static final String COMMAND_NAME = "rnb";
-    private String[] rnpCommands = {"a", "c", "about","math"};
+    private String[] rnpCommands = {"a", "c", "about","math","help"};
     // 自动补全列表
     String x="0" , z = "0";
     double nx = new Double(x);
@@ -148,20 +148,24 @@ public final class Rb extends JavaPlugin implements Listener  {
                     // 咕咕咕 (⓿_⓿)
                     return true;
                 }
+                if (args[0].toLowerCase().equals("help")) {
+                    sender.sendMessage("----RNB(B版)帮助----");
+                    sender.sendMessage("主指令 /rnb");
+                    sender.sendMessage("自动获得当前世界坐标换算 /rnb a");
+                    sender.sendMessage("手动输入坐标换算 /rnb c");
+                    sender.sendMessage("关于插件 /rnb about");
+                    sender.sendMessage("数学计算 /rnb math");
+                    sender.sendMessage("(1/1)页");
+                    return true;
+                    //帮助
+                }
 
             }
 
         }
-        sender.sendMessage("----RNB(B版)帮助----");
-        sender.sendMessage("帮助 /rnb");
-        sender.sendMessage("自动获得当前世界坐标换算 /rnb a");
-        sender.sendMessage("手动输入坐标换算:");
-        sender.sendMessage("/rnb c");
-        sender.sendMessage("关于插件:");
-        sender.sendMessage("/rnb about");
-        sender.sendMessage("(1/1)页");
-        // 代码默认执行这块内容
 
+        // 代码默认执行这块内容
+        sender.sendMessage("输入/rnb help 来获取帮助");
         return true;
 
 
